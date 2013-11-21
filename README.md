@@ -9,7 +9,16 @@ If you just love your regions The Anti-`#region` Legion is probably not for you.
 How do I join the Legion?
 -------------------------
 
-You join by starring this repository. 
+You can join by starring this repository, or join in the conversation on social media such as Twitter using hashtag `#endregions`.
+
+What does an upstanding member of the Legion do?
+------------------------------------------------
+
+Join us in practicing and preaching good code practices, such as using the following ways to deal with grouping and organization of expanding code (rather than regions):
+
+1. *Partial class* - a useful methodology of moving dependency items (such as properties or methods) without refactoring a code-base with a rippling change
+2. *Extract methods* - improve the JIT's ability to optimize performance by allowing it to not load sections of code if the branch hasn't been or can never be exercised by extracting methods out of the contents of large block statements (if/else,for/while,anonymous delegates,etc)
+3. *Single responsibility* - reduce complexity of classes by encapsulating the responsibility for aspects of functionality to designated layers and objects
 
 History
 -------
