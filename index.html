@@ -37,9 +37,21 @@
 <h2>
 <a name="how-do-i-join-the-legion" class="anchor" href="#how-do-i-join-the-legion"><span class="octicon octicon-link"></span></a>How do I join the Legion?</h2>
 
-<p>You join by starring this repository. </p>
+<p>You can join by starring this repository, or join in the conversation on social media such as Twitter using hashtag <code>#endregions</code>.</p>
 
 <h2>
+<a name="what-does-an-upstanding-member-of-the-legion-do" class="anchor" href="#what-does-an-upstanding-member-of-the-legion-do"><span class="octicon octicon-link"></span></a>What does an upstanding member of the Legion do?</h2>
+
+<p>Join us in practicing and preaching good code practices, such as using the following ways to deal with grouping and organization of expanding code (rather than regions):</p>
+
+<ol>
+<li>
+<em>Partial class</em> - a useful methodology of moving dependency items (such as properties or methods) without refactoring a code-base with a rippling change</li>
+<li>
+<em>Extract methods</em> - improve the JIT's ability to optimize performance by allowing it to not load sections of code if the branch hasn't been or can never be exercised by extracting methods out of the contents of large block statements (if/else,for/while,anonymous delegates,etc)</li>
+<li>
+<em>Single responsibility</em> - reduce complexity of classes by encapsulating the responsibility for aspects of functionality to designated layers and objects</li>
+</ol><h2>
 <a name="history" class="anchor" href="#history"><span class="octicon octicon-link"></span></a>History</h2>
 
 <p>The idea for the anti-<code>#region</code> legion started from a <a href="https://twitter.com/jrusbatch/status/392473615557746688">twitter conversation</a> which again was started from <a href="https://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2678342-region-directive-considered-harmful-was-get-rid">Microsoft declining to remove <code>#regions</code> from c#</a>. </p>
