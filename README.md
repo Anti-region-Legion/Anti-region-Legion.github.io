@@ -3,7 +3,7 @@ The Anti-`#region` Legion
 
 The Anti-`#region` Legion is a community for people that believe that the `C#` [`#region`](http://msdn.microsoft.com/en-us/library/9a1ybwek%28v=vs.110%29.aspx) is a unfortunate language construct. 
 
-If you just love your regions The Anti-`#region` Legion is probably not for you. But it is suggested that you read [Richard Banks post on some of the issues with regions](http://www.richard-banks.org/2011/02/anti-region-campaign.html).
+If you just love your regions The Anti-`#region` Legion is probably not for you. But it is suggested that you read [Richard Banks post on some of the issues with regions](http://www.richard-banks.org/2011/02/anti-region-campaign.html). 
 
 
 How do I join the Legion?
@@ -20,10 +20,31 @@ Join us in practicing and preaching good code practices, such as using the follo
 2. *Extract methods* - improve the JIT's ability to optimize performance by allowing it to not load sections of code if the branch hasn't been or can never be exercised by extracting methods out of the contents of large block statements (if/else,for/while,anonymous delegates,etc)
 3. *Single responsibility* - reduce complexity of classes by encapsulating the responsibility for aspects of functionality to designated layers and objects
 
+I Just Want to Get Rid of All Regions in My Code Now!
+-----------------------------------------------------
+
+Ok, here are a couple of quite simple ways to do that. One command line and one from within Visual Studio.
+
+*Command line* - run this PowerShell command in your toplevel source folder(s) (c# class files only):
+
+    dir -recurse -filter *.cs $src | foreach ($_) {
+        $file = $_.fullname
+        echo $file
+        (get-content $file) | where {$_ -notmatch "^.*\#(end)?region.*$" } | out-file $file
+    }
+
+You can read more on [Richard Dingwall's blog](http://richarddingwall.name/2010/08/12/powershell-to-recursively-strip-c-regions-from-files/). 
+
+*Visual Studio*:
+Press `ctrl` + `shift` + `H` to "Replace in Files" and as "Find options" "Use Regular Expressions". Then search for `^[ \t]*\#(region|endregion).*\n` and replace it with nothing/empty string. 
+
+
+See [more details in this stackoverflow answer](http://stackoverflow.com/a/13382749/587279).
+
 History
 -------
 
-The idea for the anti-`#region` legion started from a [twitter conversation](https://twitter.com/jrusbatch/status/392473615557746688) which again was started from [Microsoft declining to remove `#regions` from c#](https://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2678342-region-directive-considered-harmful-was-get-rid). 
+The idea for the anti-`#region` legion started from a [twitter conversation](https://twitter.com/jrusbatch/status/392473615557746688) which again was started from [Microsoft declining to remove `#region`s from c#](https://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2678342-region-directive-considered-harmful-was-get-rid). 
 
 
 **Join the anti-`#region` Legion today!**
