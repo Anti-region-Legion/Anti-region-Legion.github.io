@@ -32,7 +32,7 @@
 
 <p>The Anti-<code>#region</code> Legion is a community for people that believe that the <code>C#</code> <a href="http://msdn.microsoft.com/en-us/library/9a1ybwek%28v=vs.110%29.aspx"><code>#region</code></a> is a unfortunate language construct. </p>
 
-<p>If you just love your regions The Anti-<code>#region</code> Legion is probably not for you. But it is suggested that you read <a href="http://www.richard-banks.org/2011/02/anti-region-campaign.html">Richard Banks post on some of the issues with regions</a>.</p>
+<p>If you just love your regions The Anti-<code>#region</code> Legion is probably not for you. But it is suggested that you read <a href="http://www.richard-banks.org/2011/02/anti-region-campaign.html">Richard Banks post on some of the issues with regions</a>. </p>
 
 <h2>
 <a name="how-do-i-join-the-legion" class="anchor" href="#how-do-i-join-the-legion"><span class="octicon octicon-link"></span></a>How do I join the Legion?</h2>
@@ -52,9 +52,30 @@
 <li>
 <em>Single responsibility</em> - reduce complexity of classes by encapsulating the responsibility for aspects of functionality to designated layers and objects</li>
 </ol><h2>
+<a name="i-just-want-to-get-rid-of-all-regions-in-my-code-now" class="anchor" href="#i-just-want-to-get-rid-of-all-regions-in-my-code-now"><span class="octicon octicon-link"></span></a>I Just Want to Get Rid of All Regions in My Code Now!</h2>
+
+<p>Ok, here are a couple of quite simple ways to do that. One command line and one from within Visual Studio.</p>
+
+<p><em>Command line</em> - run this PowerShell command in your toplevel source folder(s) (c# class files only):</p>
+
+<pre><code>dir -recurse -filter *.cs $src | foreach ($_) {
+    $file = $_.fullname
+    echo $file
+    (get-content $file) | where {$_ -notmatch "^.*\#(end)?region.*$" } | out-file $file
+}
+</code></pre>
+
+<p>You can read more on <a href="http://richarddingwall.name/2010/08/12/powershell-to-recursively-strip-c-regions-from-files/">Richard Dingwall's blog</a>. </p>
+
+<p><em>Visual Studio</em>:
+Press <code>ctrl</code> + <code>shift</code> + <code>H</code> to "Replace in Files" and as "Find options" "Use Regular Expressions". Then search for <code>^[ \t]*\#(region|endregion).*\n</code> and replace it with nothing/empty string. </p>
+
+<p>See <a href="http://stackoverflow.com/a/13382749/587279">more details in this stackoverflow answer</a>.</p>
+
+<h2>
 <a name="history" class="anchor" href="#history"><span class="octicon octicon-link"></span></a>History</h2>
 
-<p>The idea for the anti-<code>#region</code> legion started from a <a href="https://twitter.com/jrusbatch/status/392473615557746688">twitter conversation</a> which again was started from <a href="https://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2678342-region-directive-considered-harmful-was-get-rid">Microsoft declining to remove <code>#regions</code> from c#</a>. </p>
+<p>The idea for the anti-<code>#region</code> legion started from a <a href="https://twitter.com/jrusbatch/status/392473615557746688">twitter conversation</a> which again was started from <a href="https://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2678342-region-directive-considered-harmful-was-get-rid">Microsoft declining to remove <code>#region</code>s from c#</a>. </p>
 
 <p><strong>Join the anti-<code>#region</code> Legion today!</strong></p>
       </section>
