@@ -9,7 +9,7 @@ If you just love your regions The Anti-`#region` Legion is probably not for you.
 How do I join the Legion?
 -------------------------
 
-You can join by starring this repository, or join in the conversation on social media such as Twitter using hashtag `#endregions`.
+You can [join by starring this repository](https://github.com/Anti-region-Legion/Anti-region-Legion.github.io) (if you have a github account), or join in the conversation on social media such as Twitter using hashtag `#endregions`. You are also encouraged to [suggest your own ideas to this site on the _issues_ page](https://github.com/Anti-region-Legion/Anti-region-Legion.github.io/issues).
 
 What does an upstanding member of the Legion do?
 ------------------------------------------------
