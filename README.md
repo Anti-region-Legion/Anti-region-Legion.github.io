@@ -44,7 +44,7 @@ See [more details in this stackoverflow answer](http://stackoverflow.com/a/13382
 My Team Won't let me Delete the Regions!?
 -----------------------------------------
 
-Poor you. If you just want to see the code within collapsed regions you can use [ctrl] + [M], [ctrl] + [L] to toggles between expand and collapse all sections. 
+Poor you. If you just want to see the code within collapsed regions you can use `ctrl` + `M`, `ctrl` + `L` to toggles between expand and collapse all sections. 
 
 There is even a [Visual Studio extension that does this and more automatically](http://visualstudiogallery.msdn.microsoft.com/0ca60d35-1e02-43b7-bf59-ac7deb9afbca). 
 
