@@ -54,5 +54,11 @@ History
 
 The idea for the anti-`#region` legion started from a [twitter conversation](https://twitter.com/jrusbatch/status/392473615557746688) which again was started from [Microsoft declining to remove `#region`s from c#](https://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2678342-region-directive-considered-harmful-was-get-rid). 
 
+How can I show my anti-`#region` legion membership?
+---------------------------------------------------
+
+Be creative! Make a sticker, tag your computer with `#endregions` or buy a [t-shirt](http://www.cafepress.com/cp/customize/product2.aspx?number=1005536199). 
+
 
 **Join the anti-`#region` Legion today!**
+
