@@ -1,7 +1,7 @@
 The Anti-`#region` Legion
 =========================
 
-The Anti-`#region` Legion is a community for people that believe that the `C#` [`#region`](http://msdn.microsoft.com/en-us/library/9a1ybwek%28v=vs.110%29.aspx) is a unfortunate part of the language. 
+The Anti-`#region` Legion is a community for people that believe that the `C#` [`#region`](http://msdn.microsoft.com/en-us/library/9a1ybwek%28v=vs.110%29.aspx) is an unfortunate part of the language. 
 
 If you just love your regions The Anti-`#region` Legion is probably not for you. But it is suggested that you read [Richard Banks post on some of the issues with regions](http://www.richard-banks.org/2011/02/anti-region-campaign.html). 
 
